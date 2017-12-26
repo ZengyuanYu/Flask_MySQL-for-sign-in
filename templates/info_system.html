@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>南京市秦淮区排水户管理信息系统</title>
+<script type="text/javascript" src = "jquery.js"></script>
+<script type="text/javascript" src =  "waypoint.js"></script>
+<style type="text/css">
+#top_div{
+ position:fixed;
+ bottom:80px;
+ right:0;
+ display:none;
+}
+</style>
+<script type="text/javascript">
+window.onscroll = function(){ //设置滚滚动条
+ 	var t = document.documentElement.scrollTop || document.body.scrollTop;
+ 	var top_div = document.getElementById( "top_div" );
+ 	if( t >= 300 ) {
+ 	 top_div.style.display = "inline";
+ 	} else {
+  	top_div.style.display = "none";
+ 	}
+}
+</script>
+<script type="javascript">
+
+// POST请求
+var data = {}
+//如果页面并没有表单，只是input框，请求也只是发送这些值，那么可以直接获取放到data中
+data['name'] = $('#name').val()
+$.ajax({
+    type: 'POST',
+    url: info_system.html,//url当前页地址，发送请求的地址
+    data: data,
+    dataType: 'json', //注意：这里是指希望服务端返回json格式的数据
+    success: function(data) { // 这里的data就是json格式的数据
+    },
+    error: function(xhr, type) {
+    }
+});
+</script>
+    <a name="top"></a>
+<div id="top_div"><a href="#top">返回顶部</a></div>
+</div>
+	<style type="text/css">
+	h1,h2{ font-family:"方正兰亭超细黑简体"; font-weight:bold; font-size:36px; text-align:center}
+	</style>
+</head>
+
+<body>
+<h2>南京市秦淮区排水户管理信息系统</h2>
+<form id="form1" name = "form1" method="post" action="testsave.py">
+申请编号：<input name = "sqbh" type="text" value="" />
+受理编号：<input name ="slbh" type= "text" value="" /></br>
+申请时间：<input name = "sqsj" type="text" value="" />
+受理时间：<input name ="slsj" type= "text" value="" /></br>
+</form>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<h1>城市排水许可申请表</h1>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<form id="form2"  name = "form2"  style="font-size:26px;" method="post" action="testsave.py">
+排水户名称（章）<input name = "pshmc"  style="font-size:26px;" type="text" value="" /></br>
+排 水 项目名称 <input name = "psxmmc"  style="font-size:26px;" type="text" value="" /></br>
+填 表  日  期 <input name = "tbrq" style="font-size:26px;" type="text" value="" /></br>
+                <input type="submit" value = "提交">
+</form>
+<form id = "form3">
+申请类别：首次申请<input name = "scsq"  size="5px;" style="font-size:26px;" type="text" value="" />延期申请：<input name = "yqsq"  size="5px;"  style="font-size:26px;" type="text" value="" /></br>
+</form>
+
+
+
+<h3>一、基本情况</h3>
+<form id = "formm4" name = "form4" style = "" method="post" action="testsave.py">
+    申请单位<input name = "sqdw"  type="text" value = ""><br/>
+    地    址<input name = "dz" type="text" value=""/>邮编<input name = "yb" type="text" value = ""><br>
+</form>
+
+</body>
+</html>
