@@ -1,0 +1,83 @@
+#encoding:utf-8
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:272617@localhost:3306/mysql'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+db = SQLAlchemy(app)
+class Table_three(db.Model):#排水户排水水质情况
+    __tablename__ = 'table3'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    wd = db.Column(db.Integer)
+    phz = db.Column(db.Integer)#1到35号的浓度
+    xfw = db.Column(db.Integer)
+    ycgt = db.Column(db.Integer)
+    yz = db.Column(db.Integer)
+    kwyl = db.Column(db.Integer)
+    bxw = db.Column(db.Integer)#苯系物
+    yhw = db.Column(db.Integer)
+    lhw = db.Column(db.Integer)
+    hfxf = db.Column(db.Integer)
+    shxyl = db.Column(db.Integer)
+    hxhyl = db.Column(db.Integer)
+    sjxgt = db.Column(db.Integer)#深解性固体
+    yjl = db.Column(db.Integer)
+    ba = db.Column(db.Integer)
+    fhw = db.Column(db.Integer)
+    zgong = db.Column(db.Integer)
+    zxi = db.Column(db.Integer)
+    zq= db.Column(db.Integer) #19号字不清楚
+    zt = db.Column(db.Integer)
+    zxin = db.Column(db.Integer)
+    zn = db.Column(db.Integer)
+    zm = db.Column(db.Integer)
+    ztie = db.Column(db.Integer)
+    zti = db.Column(db.Integer)
+    ylzbmhx = db.Column(db.Integer)
+    ljg = db.Column(db.Integer)
+    lsy = db.Column(db.Integer)
+    xjbl = db.Column(db.Integer)
+    qh = db.Column(db.Integer)
+    zsh = db.Column(db.Integer)
+    zlao = db.Column(db.Integer)
+    zongxi = db.Column(db.Integer)
+    lsyp = db.Column(db.Integer)
+    sd = db.Column(db.Integer)
+    def __init__(self,id,wd,phz,xfw,ycgt,yz,kwyl,bxw,yhw,lhw,hfxf,shxyl,hxhyl, sjxgt,yjl,ba,fhw,zgong,zxi,zq,zt,zxin,zn,zm,ztie,zti,ylzbmhx,ljg,lsy,xjbl,qh,zsh,zlao,zongxi,lsyp,sd):
+        self.id = id
+        self.wd = wd
+        self.phz = phz
+        self.xfw = xfw
+        self.ycgt = ycgt
+        self.yz = yz
+        self.kwyl = kwyl
+        self.bxw = bxw
+        self.yhw = yhw
+        self.lhw = lhw
+        self.hfxf = hfxf
+        self.shxyl = shxyl
+        self.hxhyl = hxhyl
+        self.sjxgt = sjxgt
+        self.yjl = yjl
+        self.ba = ba
+        self.fhw = fhw
+        self.zgong = zgong
+        self.zxi =zxi
+        self.zq = zq
+        self.zt = zt
+        self.zxin = zxin
+        self.zn = zn
+        self.zm = zm
+        self.ztie = ztie
+        self.zti = zti
+        self.ylzbmhx = ylzbmhx
+        self.ljg = ljg
+        self.lsy = lsy
+        self.xjbl = xjbl
+        self.qh = qh
+        self.zsh = zsh
+        self.zlao = zlao
+        self.zongxi = zongxi
+        self.lsyp = lsyp
+        self.sd = sd
+db.create_all()
