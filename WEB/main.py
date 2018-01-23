@@ -1,8 +1,9 @@
 #enconding： utf-8
 
 from flask import Flask
+import config
 app = Flask(__name__)
-
+app.config.from_object(config)
 
 @app.route('/')
 def hello_world():
@@ -10,4 +11,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
