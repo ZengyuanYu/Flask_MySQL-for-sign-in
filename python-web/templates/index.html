@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#    HTML中出现的文字#}
+{#    <p>用户名：{{ username }}</p>#}
+{#    <p>性别： {{ gender }}</p>#}
+{#    <p>年龄： {{ age }}</p>#}
+{##}
+{#    <hr/>#}
+{#    <p>名字：{{ person.name }}</p>#}
+{#    <p>年龄：{{ person.age }}</p>#}
+{##}
+{#    <hr/>#}
+{#    <p>百度：{{ websites.baidu }}</p>#}
+{#    <p>谷歌：{{ websites.google }}</p>#}
+{#    <hr/>#}
+    {% if user and user.age > 18 %}
+        <a href="#">{{ user.username }}</a>
+        <a href="#">注销</a>
+    {% else %}
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+    {% endif %}
+</body>
+</html>
