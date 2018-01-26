@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="{{ avatar | default('https://tvax4.sinaimg.cn/crop.0.0.512.512.50/006iUh3aly8fhklklu3t3j30e80e8t92.jpg') }}" alt="">
+
+    <hr/>
+
+    <p>评论数：（{{ comments | length }}）</p>
+    <ul>
+        {% for comment in comments%}
+            <li>
+                <a href="#">{{ comment.user }}</a>
+                <p>{{ comment.content }}</p>
+            </li>
+        
+        {% endfor %}
+        
+    </ul>
+</body>
+</html>
