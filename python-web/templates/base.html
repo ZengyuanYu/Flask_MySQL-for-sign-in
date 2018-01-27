@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+      <style>
+        .nav{
+            background: #3a3a3a;
+            height: 65px;
+        }
+        ul{
+            overflow: hidden;
+        }
+        ul li{
+            float: left;
+            list-style: none;
+            padding: 0 10px;
+            line-height: 65px;
+
+        }
+        ul li a{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a herf="#">首页</a></li>
+        <li><a herf="#">发布问答</a></li>
+
+    </ul>
+</div>
+{% block main %}{% endblock %}
+</body>
+</html>
