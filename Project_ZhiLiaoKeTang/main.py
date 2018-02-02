@@ -53,5 +53,12 @@ def regist():
                 db.session.commit()
                 return redirect(url_for('login'))
 
+@app.route('/question/', methods=['GET', 'POST'])
+def question():
+    if request.method == 'GET':
+        return render_template('question.html')
+    else:
+        pass
+
 if __name__ == '__main__':
     app.run()
